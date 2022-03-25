@@ -20,6 +20,10 @@ const Products = () => {
         setCarts(cartProduct);
     }
 
+    const againSelect = () =>{
+        setCarts([]);
+    }
+
     return (
         <div className="container my-5">
             <div className="row gx-5">
@@ -45,7 +49,7 @@ const Products = () => {
                     }
                     <div className='mt-3'>
                         <button className='btn mx-1'>Select One</button>
-                        <button className='btn'>Again Select</button>
+                        <button onClick={againSelect} className='btn'>Again Select</button>
                     </div>
                 </div>
             </div>

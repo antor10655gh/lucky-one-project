@@ -1,23 +1,5 @@
 [
     {
-      "id": "623e09370110b62acb49bf84",
-      "price": "$12.56",
-      "picture": "http://surl.li/bprvb",
-      "name": "Citrus Hazy"
-    },
-    {
-      "id": "623e093715a33b49f2ed7014",
-      "price": "$20.62",
-      "picture": "http://surl.li/bpruc",
-      "name": "Pepsi Wolf"
-    },
-    {
-      "id": "623e09370672d6d9700eff5f",
-      "price": "$15.98",
-      "picture": "http://surl.li/bprud",
-      "name": "Coca Cola"
-    },
-    {
       "id": "623e0937686ea3bbcea0182f",
       "price": "$14.86",
       "picture": "http://surl.li/bprxe",
@@ -34,6 +16,24 @@
       "price": "$17.19",
       "picture": "http://surl.li/bpruj",
       "name": "Chupa Chups"
+    },
+    {
+      "id": "623e09370110b62acb49bf84",
+      "price": "$12.56",
+      "picture": "http://surl.li/bprvb",
+      "name": "Citrus Hazy"
+    },
+    {
+      "id": "623e093715a33b49f2ed7014",
+      "price": "$20.62",
+      "picture": "http://surl.li/bpruc",
+      "name": "Pepsi Wolf"
+    },
+    {
+      "id": "623e09370672d6d9700eff5f",
+      "price": "$15.98",
+      "picture": "http://surl.li/bprud",
+      "name": "Coca Cola"
     },
     {
       "id": "623e09371cc1a56ef3a5e509",

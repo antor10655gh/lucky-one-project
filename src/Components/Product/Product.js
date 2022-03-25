@@ -7,7 +7,7 @@ const Product = (props) => {
     console.log(props);
     const {id, name, price, picture} = props.product;
     return (
-            <div className="col gx-4 gy-5">
+            <div className="col gx-4 mb-4">
                 <div className="box-shadow">
                     <div className="banner">
                         <img className='img-fluid' src={picture} alt="" />

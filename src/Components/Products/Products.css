@@ -1,3 +1,20 @@
 .cart-container {
     background-color: rgba(214, 97, 97, 0.425);
 }
+
+.select {
+    position: relative;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.select span {
+    color: aliceblue;
+}
+
+.dlt-btn {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    border: none;
+}

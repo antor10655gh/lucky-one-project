@@ -1,9 +1,12 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import SelectOne from '../SelectOne/SelectOne';
 import './Products.css'
 
 const Products = () => {
+    const [selectCart, setSelect] = useState([]);
     const [carts, setCarts] = useState([]);
     const [products, setProducts] = useState([]);
 
@@ -18,7 +21,7 @@ const Products = () => {
     const addToCart = (product) =>{
 
         const selectedProduct = product;
-        console.log(selectedProduct);
+        // console.log(selectedProduct);
         let cartProduct = [];
 
         // this condition has been created for select unique product
@@ -36,6 +39,29 @@ const Products = () => {
         }
         
         
+    }
+
+
+    // select one functionality
+    const selectOne = (selectedProduct) =>{
+        const randomValue = Math.floor(Math.random() * (3 - 0 +0) +0);
+        const selectContain = document.getElementById('select');
+        // console.log(typeof(randomValue));
+        // console.log(randomValue);
+        const selectValue = selectedProduct[randomValue].name;
+        selectContain.innerHTML = `
+            <div class='select'>
+              <h3> ${selectValue ? selectValue : 'Click Again'}</h3>
+              <span>This is perfect drink for you!!!</span>
+              <button class='dlt-btn' onclick='${deleteSelectProduct}'><i class="fa-solid fa-delete-left"></i></button>
+            </div>  
+        `
+        console.log(selectedProduct[randomValue]);
+        
+    }
+
+    const deleteSelectProduct = () =>{
+        document.getElementById('select').textContent = '';
     }
 
     // add a function which is remove all selected product from the cart-container
@@ -68,8 +94,11 @@ const Products = () => {
                         ></Cart>)
                     }
                     <div className='mt-3'>
-                        <button className='btn mx-1'>Select One</button>
+                        <button onClick={()=>selectOne(carts)} className='btn mx-2'>Select One</button>
                         <button onClick={againSelect} className='btn'>Again Select</button>
+                    </div>
+                    <div id='select'>
+
                     </div>
                 </div>
             </div>

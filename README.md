@@ -1,5 +1,9 @@
 # Project Name: "Drink Plus"
 
+## Live Site Link Is Given Below:
+
+[Live Site Link](https://drink-plus-app.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

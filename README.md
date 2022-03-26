@@ -1,4 +1,4 @@
-# Drink Plus Which Getting Started with Create React App
+# Project Name: "Drink Plus"
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

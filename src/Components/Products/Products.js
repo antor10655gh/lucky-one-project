@@ -43,7 +43,7 @@ const Products = () => {
 
 
     // select one functionality
-    const selectOne = (selectedProduct) =>{
+    const selectOne = (selectedProduct, dlt) =>{
         const randomValue = Math.floor(Math.random() * (3 - 0 +0) +0);
         const selectContain = document.getElementById('select');
         // console.log(typeof(randomValue));
@@ -53,17 +53,11 @@ const Products = () => {
             <div class='select'>
               <h3> ${selectValue ? selectValue : 'Click Again'}</h3>
               <span>This is perfect drink for you!!!</span>
-              <button class='dlt-btn' onclick='${deleteSelectProduct}'><i class="fa-solid fa-delete-left"></i></button>
             </div>  
         `
         console.log(selectedProduct[randomValue]);
         
     }
-
-    const deleteSelectProduct = () =>{
-        document.getElementById('select').textContent = '';
-    }
-
     // add a function which is remove all selected product from the cart-container
     const againSelect = () =>{
         setCarts([]);

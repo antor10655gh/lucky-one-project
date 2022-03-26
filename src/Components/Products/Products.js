@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
-import SelectOne from '../SelectOne/SelectOne';
 import './Products.css'
 
 const Products = () => {
@@ -61,6 +60,7 @@ const Products = () => {
     // add a function which is remove all selected product from the cart-container
     const againSelect = () =>{
         setCarts([]);
+        document.getElementById('select').innerHTML = '';
     }
 
     return (
@@ -77,7 +77,7 @@ const Products = () => {
                         }
                     </div>
                 </div>
-                <div className="col-5 col-lg-4 cart-container">
+                <div className="col-5 col-lg-4 cart-container mb-4">
                     <div className="title text-start my-5">
                         <h2>Selected Drinks</h2>
                     </div>

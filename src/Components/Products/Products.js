@@ -13,13 +13,32 @@ const Products = () => {
         .then(json=>setProducts(json));
     },[]);
 
+
+    // add a function which is add to product on cart-container
     const addToCart = (product) =>{
+
         const selectedProduct = product;
+        console.log(selectedProduct);
         let cartProduct = [];
-        cartProduct = [...carts, selectedProduct];
-        setCarts(cartProduct);
+
+        // this condition has been created for select unique product
+        if(carts.includes(selectedProduct)){
+            setCarts(carts);
+        }
+        else{
+            cartProduct = [...carts, selectedProduct];
+            if(cartProduct.length === 5){
+                alert("You reached at maximum selection...");
+            }
+            else{
+                setCarts(cartProduct);
+            }
+        }
+        
+        
     }
 
+    // add a function which is remove all selected product from the cart-container
     const againSelect = () =>{
         setCarts([]);
     }
@@ -44,6 +63,7 @@ const Products = () => {
                     </div>
                     {
                         carts.map(cart=><Cart
+                            key={cart.id}
                             cart={cart}
                         ></Cart>)
                     }

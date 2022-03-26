@@ -65,8 +65,8 @@ const Products = () => {
 
     return (
         <div className="container my-5">
-            <div className="row gx-5">
-                <div className="col-7 col-lg-8">
+            <div className="row row-cols-1 gx-5">
+                <div className=" col-lg-8">
                     <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
                         {
                             products.map(product=><Product
@@ -77,7 +77,7 @@ const Products = () => {
                         }
                     </div>
                 </div>
-                <div className="col-5 col-lg-4 cart-container mb-4">
+                <div className="col-lg-4 cart-container mb-4 mb-lg-4">
                     <div className="title text-start my-5">
                         <h2>Selected Drinks</h2>
                     </div>
@@ -91,7 +91,7 @@ const Products = () => {
                         <button onClick={()=>selectOne(carts)} className='btn mx-2'>Select One</button>
                         <button onClick={againSelect} className='btn'>Again Select</button>
                     </div>
-                    <div id='select'>
+                    <div id='select' className='my-5 my-lg-2'>
 
                     </div>
                 </div>
